@@ -1,0 +1,6 @@
+{
+  "baseURL":"https://www.d3a.io/",
+  "chromeWebSecurity": false,
+  "timeout":"3000"
+    
+  }

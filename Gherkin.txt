@@ -1,0 +1,32 @@
+Testcase 1
+Given the user launches the URL
+When the user Clicks on login button
+And the user provides the email address and password
+When the user Clicks on login button
+Then the user is able to login successfully
+And the user verifies home header in the home screen
+
+******************************************************************************************************************************************************
+
+Testcase 2
+Given the user is logged into home screen
+When the user Clicks on navigation button
+And the user is able to see multiple options to select
+When the user Clicks on projects button from the navigation bar
+And user click on new project button from project tab
+When the user enters project name and project description and click on add button from the new project popup
+Then the user is able to see the project name in the project list
+
+******************************************************************************************************************************************************
+
+
+Testcase 3
+Given the user is logged in to home screen
+When the user Clicks on project button from the navigation bar
+And the user open the create a project
+When the user Clicks on new simulation button from the project
+And the user enters simulation name and the simulation description in new simulation pop up
+When the user Clicks on next button and comes back to projects
+Then the user verify the newly created simulation under the new project
+
+******************************************************************************************************************************************************

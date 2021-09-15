@@ -1,10 +1,6 @@
-// const cli = require("cypress/lib/cli");
-
 describe('Interview Test',()=> {
     beforeEach(()=>{
         cy.visit('https://www.d3a.io/')
-    });
-    it('Login Validation',()=>{
         cy.xpath('//span[normalize-space()="log in"]')
         .click()
         cy.log("Log in button is clicked ")
@@ -16,12 +12,12 @@ describe('Interview Test',()=> {
         cy.get('input[id=password]')
         .type('GridTest@12')
         cy.log('Password entered')
-        cy.screenshot('Login')
 
         cy.get('button')
         .click()
         cy.log('Logged in success !')
-
+    });
+    it('Login Validation',()=>{
         cy.get('h1')
         .invoke('text')
         .should('equal','Home')
@@ -31,18 +27,7 @@ describe('Interview Test',()=> {
     });
 
     it('Create New Project',()=>{
-        cy.xpath('//span[normalize-space()="log in"]')
-        .click()
-
-        cy.get('input[id=email]')
-        .type('shriga1990@gmail.com')
-
-        cy.get('input[id=password]')
-        .type('GridTest@12')
-
-        cy.get('button')
-        .click()
-
+        
         cy.xpath('//div[@role="button"]')
         .click()
         cy.log('Naviagation bar clicked')
@@ -71,8 +56,10 @@ describe('Interview Test',()=> {
         .contains('Add')
         .click()
         cy.log('Project added !')
+        cy.screenshot('After Add')
 
         cy.reload()
+        cy.wait(5000)
 
         cy.xpath('//span[contains(text(),"TestProject")]')
         .invoke('text')
@@ -83,18 +70,6 @@ describe('Interview Test',()=> {
     });
 
     it('Create New simulation',()=>{
-
-        cy.xpath('//span[normalize-space()="log in"]')
-        .click()
-        
-        cy.get('input[id=email]')
-        .type('shriga1990@gmail.com')
-
-        cy.get('input[id=password]')
-        .type('GridTest@12')
-
-        cy.get('button')
-        .click()
 
         cy.xpath('//div[@role="button"]')
         .click()
@@ -112,6 +87,7 @@ describe('Interview Test',()=> {
        cy.log('New Simulation button is clicked')
        cy.screenshot('Simulation creation')
        
+       cy.wait(5000)
        cy.xpath('//input[@placeholder="configuration name"]')
        .clear()
        cy.log('Removing default name')
@@ -127,6 +103,7 @@ describe('Interview Test',()=> {
        cy.xpath('//span[normalize-space()="Next"]')
        .click()
 
+       cy.wait(5000)
        cy.xpath('//div[contains(text(),"Start by adding your first node..")]/following::button')
        .click()
        cy.log('Models added')
@@ -146,7 +123,7 @@ describe('Interview Test',()=> {
         cy.get('button')
         .contains('Projects')
         .click()
-
+        cy.wait(5000)
        cy.xpath('//span[contains(text(),"TestProject")]')
        .click()
 

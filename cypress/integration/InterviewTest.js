@@ -5,16 +5,7 @@ describe('Interview Test',()=> {
         .click()
         cy.log("Log in button is clicked ")
 
-        cy.get('input[id=email]')
-        .type('shriga1990@gmail.com')
-        cy.log("Username entered")
-
-        cy.get('input[id=password]')
-        .type('GridTest@12')
-        cy.log('Password entered')
-
-        cy.get('button')
-        .click()
+        cy.loginProcess('shriga1990@gmail.com','GridTest@12')
         cy.log('Logged in success !')
     });
     it('Login Validation',()=>{

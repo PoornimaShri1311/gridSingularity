@@ -30,5 +30,4 @@ Cypress.Commands.add("loginProcess", (email, password) => {
 
     cy.get('input[id=email]').type(email)
     cy.get('input[id=password]').type(password)
-    cy.get('button').click()
  });

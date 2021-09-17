@@ -12,6 +12,10 @@
   "devDependencies": {
     "@testing-library/cypress": "^7.0.6",
     "cypress": "^7.7.0",
+    "cypress-cucumber-preprocessor": "^4.2.0",
     "cypress-xpath": "^1.6.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/integration/features/step_definitions/**/"
   }
 }

@@ -1,6 +1,9 @@
 {
-  "baseURL":"https://www.d3a.io/",
+  "baseURL": "https://www.d3a.io/",
   "chromeWebSecurity": false,
-  "timeout":"3000"
-    
-  }
+  "timeout": "3000",
+  "testFiles": [
+    "**/*.{feature,features}"
+  ],
+  "retries": 0
+}
